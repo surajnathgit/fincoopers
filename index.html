@@ -767,59 +767,134 @@
     <!-- END TEXT CONTENT -->
     <!-- FEATURES-12
               ============================================= -->
+
+              <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f9f9f9;
+                }
+        
+                .animate-section {
+                    opacity: 0;
+                    transform: translateY(40px);
+                    transition: all 0.8s ease-out;
+                }
+        
+                .animate-section.show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+        
+                .cbox-1 {
+                    background: white;
+                    padding: 15px;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: all 0.6s ease-in-out;
+                    margin-bottom: 15px; /* Space between boxes */
+                }
+        
+                .cbox-1.show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+        
+                /* Delays for Sequential Animation */
+                .cbox-1:nth-child(1) { transition-delay: 0.2s; }
+                .cbox-1:nth-child(2) { transition-delay: 0.4s; }
+                .cbox-1:nth-child(3) { transition-delay: 0.6s; }
+        
+                .ico-wrap {
+                    width: 35px;
+                    height: 35px;
+                    background: #007bff;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            </style>
+
+
     <section id="features-12"
       class="shape--bg  shape--white-500 features-section division after:bg-[#f2f4f8] pt--100 pt-[100px] lg:pt-[80px] md:pt-[70px] after:absolute after:content-[''] after:z-[-1] after:w-[48%] after:h-[72%] after:left-[52%] after:top-[21%] lg:after:w-6/12 lg:after:h-[76%] lg:after:left-2/4 lg:after:top-[18%] md:after:w-[52%] md:after:h-3/4 md:after:left-[48%] md:after:top-[19%] xsm:after:h-[64%] xsm:after:top-[32.35%]">
       <div class="container">
         <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
           <!-- TEXT BLOCK -->
           <div class="md:w-5/12 lg:w-5/12 xl:w-5/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
-            <div class="txt-block left-column wow fadeInRight">
-              <!-- Section ID -->
-              <span
-                class="section-id block !text-[0.85rem] leading-none font-bold tracking-[0.5px] uppercase mb-[35px] lg:text-[0.85rem] lg:mb-[30px] md:mb-[25px] sm:mb-[25px] font-Jakarta">How We Solve Your Problem
-              </span>
-              <!-- Title -->
-              <h2
-                class="s-46 w-700 text-[1.875rem] lg:text-[1.625rem] md:text-[1.35294rem] sm:text-[1.25rem] xsm:text-[1.8125rem] font-bold lg:mb-[20px] md:mb-[15px] sm:mb-[20px] xsm:mb-[15px] mb-[26px] leading-[1.25] font-Jakarta sm:leading-[1.35] xsm:leading-[1.35]">
-                Transforming Challenges into Opportunities</h2>
-              <!-- Text -->
-              <p>
-              </p>
-              <!-- CONTENT BOX #1 -->
-              <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
-                <div class="ico-wrap color--theme ml-[8px]">
-                  <div class="cbox-1-ico"><span
-                      class="flaticon-check relative right-[8px] top-px xsm:right-[6px] xsm:top-[0.5px]"></span></div>
+        <div class="txt-block left-column wow fadeInUp animate-section">
+            <!-- Section ID -->
+            <span class="section-id block !text-[0.85rem] leading-none font-bold tracking-[0.5px] uppercase mb-[35px] lg:text-[0.85rem] lg:mb-[30px] md:mb-[25px] sm:mb-[25px] font-Jakarta">
+                <strong>How We Solve Your Problem</strong>
+            </span>
+
+            <!-- Title -->
+            <h2 class="s-46 w-700 text-[1.875rem] lg:text-[1.625rem] md:text-[1.35294rem] sm:text-[1.25rem] xsm:text-[1.8125rem] font-bold lg:mb-[20px] md:mb-[15px] sm:mb-[20px] xsm:mb-[15px] mb-[26px] leading-[1.25] font-Jakarta sm:leading-[1.35] xsm:leading-[1.35]">
+                <strong>Transforming Challenges into Opportunities</strong>
+            </h2>
+
+            <!-- Separate Boxes for Each Point -->
+            <div class="bg-white">
+                <!-- Box 1 -->
+                <div class="cbox-1">
+                    <div class="ico-wrap">✔</div>
+                    <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                        <p class="mb-[8px] lg:mb-[5px] md:mb-[5px] xsm:mb-[5px]">
+                            <strong>Diagnose & Analyze:</strong> Identifying inefficiencies and workflow challenges.
+                        </p>
+                    </div>
                 </div>
-                <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
-                  <p class=" mb-[8px] lg:mb-[5px] md:mb-[5px] xsm:mb-[5px]">Diagnose & Analyze 
-                 </p>
+
+                <!-- Box 2 -->
+                <div class="cbox-1">
+                    <div class="ico-wrap">✔</div>
+                    <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                        <p class="mb-[8px] lg:mb-[5px] md:mb-[5px] xsm:mb-[5px]">
+                            <strong>Innovate & Integrate:</strong> Implementing customized tech solutions.
+                        </p>
+                    </div>
                 </div>
-              </div>
-              <!-- CONTENT BOX #2 -->
-              <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
-                <div class="ico-wrap color--theme ml-[8px]">
-                  <div class="cbox-1-ico"><span
-                      class="flaticon-check relative right-[8px] top-px xsm:right-[6px] xsm:top-[0.5px]"></span></div>
+
+                <!-- Box 3 -->
+                <div class="cbox-1">
+                    <div class="ico-wrap">✔</div>
+                    <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                        <p class="mb-0">
+                            <strong>Empower & Educate:</strong> Training teams and ensuring seamless adoption.
+                        </p>
+                    </div>
                 </div>
-                <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
-                  <p class=" mb-[8px] lg:mb-[5px] md:mb-[5px] xsm:mb-[5px]">Innovate & Integrate 
-                    
-                  </p>
-                </div>
-              </div>
-              <!-- CONTENT BOX #3 -->
-              <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
-                <div class="ico-wrap color--theme ml-[8px]">
-                  <div class="cbox-1-ico"><span
-                      class="flaticon-check relative right-[8px] top-px xsm:right-[6px] xsm:top-[0.5px]"></span></div>
-                </div>
-                <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
-                  <p class=" mb-0 ">Empower & Educate </p>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let section = document.querySelector(".animate-section");
+            let boxes = document.querySelectorAll(".cbox-1");
+
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        section.classList.add("show");
+                        boxes.forEach(box => box.classList.add("show"));
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(section);
+        });
+    </script>
           <!-- END TEXT BLOCK -->
           <!-- FEATURES-12 WRAPPER -->
           <div class="md:w-7/12 lg:w-7/12 xl:w-7/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
@@ -1695,6 +1770,8 @@
             -->
   <script src="js/changer.js"></script>
   <script defer src="js/styleswitch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </body>
 
 
