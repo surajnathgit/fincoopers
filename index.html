@@ -787,7 +787,7 @@
                     transform: translateY(0);
                 }
         
-                .cbox-1 {
+                .cbox-2 {
                     background: white;
                     padding: 15px;
                     border-radius: 8px;
@@ -800,17 +800,17 @@
                     margin-bottom: 15px; /* Space between boxes */
                 }
         
-                .cbox-1.show {
+                .cbox-2.show {
                     opacity: 1;
                     transform: translateY(0);
                 }
         
                 /* Delays for Sequential Animation */
-                .cbox-1:nth-child(1) { transition-delay: 0.2s; }
-                .cbox-1:nth-child(2) { transition-delay: 0.4s; }
-                .cbox-1:nth-child(3) { transition-delay: 0.6s; }
+                .cbox-2:nth-child(1) { transition-delay: 0.2s; }
+                .cbox-2:nth-child(2) { transition-delay: 0.4s; }
+                .cbox-2:nth-child(3) { transition-delay: 0.6s; }
         
-                .ico-wrap {
+                .ico-wrap2 {
                     width: 35px;
                     height: 35px;
                     background: #007bff;
@@ -846,9 +846,9 @@
             <!-- Separate Boxes for Each Point -->
             <div class="bg-white">
                 <!-- Box 1 -->
-                <div class="cbox-1">
-                    <div class="ico-wrap">✔</div>
-                    <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                <div class="cbox-2">
+                    <div class="ico-wrap2">✔</div>
+                    <div class="cbox-2-txt overflow-hidden flex-1 max-w-full">
                         <p class="mb-[8px] lg:mb-[5px] md:mb-[5px] xsm:mb-[5px]">
                             <strong>Diagnose & Analyze:</strong> Identifying inefficiencies and workflow challenges.
                         </p>
@@ -856,9 +856,9 @@
                 </div>
 
                 <!-- Box 2 -->
-                <div class="cbox-1">
-                    <div class="ico-wrap">✔</div>
-                    <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                <div class="cbox-2">
+                    <div class="ico-wrap2">✔</div>
+                    <div class="cbox-2-txt overflow-hidden flex-1 max-w-full">
                         <p class="mb-[8px] lg:mb-[5px] md:mb-[5px] xsm:mb-[5px]">
                             <strong>Innovate & Integrate:</strong> Implementing customized tech solutions.
                         </p>
@@ -866,9 +866,9 @@
                 </div>
 
                 <!-- Box 3 -->
-                <div class="cbox-1">
-                    <div class="ico-wrap">✔</div>
-                    <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                <div class="cbox-2">
+                    <div class="ico-wrap2">✔</div>
+                    <div class="cbox-2-txt overflow-hidden flex-1 max-w-full">
                         <p class="mb-0">
                             <strong>Empower & Educate:</strong> Training teams and ensuring seamless adoption.
                         </p>
@@ -881,7 +881,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let section = document.querySelector(".animate-section");
-            let boxes = document.querySelectorAll(".cbox-1");
+            let boxes = document.querySelectorAll(".cbox-2");
 
             let observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
