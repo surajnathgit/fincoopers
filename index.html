@@ -514,6 +514,78 @@
     <!-- END TEXT CONTENT -->
     <!-- TEXT CONTENT
               ============================================= -->
+
+              <style>
+                /* Image Styles */
+                .animated-image {
+                  border-radius: 7px;
+                  display: block;
+                  max-width: 100%;
+                  transition: transform 0.2s ease-out;
+                  position: relative;
+                  overflow: hidden;
+                }
+              
+                /* Light Gradient Overlay */
+                .animated-image::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(103, 35, 251, 0.3), transparent);
+                  opacity: 0;
+                  transition: opacity 0.2s ease-out;
+                  border-radius: 7px;
+                }
+              
+                /* Show gradient overlay on hover */
+                .animated-image:hover::after {
+                  opacity: 1;
+                }
+              
+                /* Custom Cursor */
+                .custom-cursor {
+                  position: absolute;
+                  width: 50px;
+                  height: 50px;
+                  background: radial-gradient(circle, rgba(103, 35, 251, 0.7), rgba(0, 123, 255, 0.7));
+                  border-radius: 50%;
+                  pointer-events: none;
+                  transform: translate(-50%, -50%);
+                  mix-blend-mode: difference;
+                  opacity: 0;
+                  transition: opacity 0.2s ease-out, transform 0.1s ease-out;
+                }
+              
+                /* Hover Me Text */
+                .hover-text {
+                  position: absolute;
+                  bottom: 10px;
+                  right: 15px;
+                  font-size: 16px;
+                  font-weight: bold;
+                  color: white;
+                  opacity: 1;  /* Fully visible when not hovered */
+                  pointer-events: none;
+                  animation: blinkText 1s infinite;  /* Blinking animation */
+                }
+              
+                /* Blinking Animation */
+                @keyframes blinkText {
+                  0% { opacity: 1; }
+                  50% { opacity: 0.1; }
+                  100% { opacity: 1; }
+                }
+              
+                /* Stop blinking on hover */
+                .hover-text.stop-blinking {
+                  animation: none;
+                  opacity: 1;
+                }
+              </style>
+              
               <section class="pt--200 pt-[200px] lg:pt-[200px] md:pt-[180px] ct-01 content-section division">
                 <div class="container">
                   <!-- SECTION CONTENT (ROW) -->
@@ -556,12 +628,56 @@
                       </div>
                     </div>
                     <!-- END TEXT BLOCK -->
-                    <!-- IMAGE BLOCK -->
-                    <div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
-                      <div class="img-block text-center right-column wow fadeInLeft ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]">
-                        <img class="img-fluid" src="images/img-06.png" alt="content-image">
-                      </div>
-                    </div>
+                  <!-- IMAGE BLOCK -->
+<div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
+  <div class="img-block text-center right-column wow fadeInLeft ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]">
+    <img class="img-fluid animated-image" src="images/img-06.png" alt="content-image">
+    <div class="custom-cursor"></div>
+    <div class="hover-text" style="padding: 0 10px 10px 0;">Hover Me</div>
+  </div>
+</div>
+
+<script>
+  const animatedImage = document.querySelector('.animated-image');
+  const cursor = document.querySelector('.custom-cursor');
+  const hoverText = document.querySelector('.hover-text');
+
+  animatedImage.addEventListener('mousemove', function (e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    // Calculate tilt angles
+    const percentX = (x - centerX) / centerX;
+    const percentY = (y - centerY) / centerY;
+    const rotateY = percentX * 10; 
+    const rotateX = -percentY * 10; 
+
+    // Apply tilt transformation
+    this.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+    // Update gradient overlay position
+    this.style.setProperty('--x', `${(x / rect.width) * 100}%`);
+    this.style.setProperty('--y', `${(y / rect.height) * 100}%`);
+
+    // Move the custom cursor
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    cursor.style.opacity = '1';
+
+    // Stop blinking and keep text visible
+    hoverText.classList.add('stop-blinking');
+  });
+
+  // Reset tilt, cursor, and restart blinking when mouse leaves
+  animatedImage.addEventListener('mouseleave', function () {
+    this.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg)';
+    cursor.style.opacity = '0';
+    hoverText.classList.remove('stop-blinking'); // Restart blinking
+  });
+</script>
+                    
                   </div>
                   <!-- END SECTION CONTENT (ROW) -->
                 </div>
