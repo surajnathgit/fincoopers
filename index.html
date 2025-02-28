@@ -393,6 +393,72 @@
       class="divider w-full h-px bg-transparent bg-[linear-gradient(90deg,rgba(206,211,246,0)_0,#bbb_38%,#bbb_64%,rgba(206,211,246,0)_99%)] opacity-40 m-0 [border:none]">
     <!-- TEXT CONTENT
               ============================================= -->
+              <style>
+                /* Gradient Heading with Animation */
+                @keyframes gradientText {
+                  0% { background-position: 0% 50%; }
+                  50% { background-position: 100% 50%; }
+                  100% { background-position: 0% 50%; }
+                }
+              
+                .gradient-heading {
+                  background: linear-gradient(90deg, #6723fb, #8e44ad);
+                  background-size: 200% 200%;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  animation: gradientText 2s infinite ease-in-out;
+                }
+              
+                /* Box Floating Animation */
+                @keyframes floatUp {
+                  0%, 100% { transform: translateY(-10px); }
+                  50% { transform: translateY(10px); }
+                }
+              
+                @keyframes floatDown {
+                  0%, 100% { transform: translateY(10px); }
+                  50% { transform: translateY(-10px); }
+                }
+              
+                .animated-box-up { animation: floatUp 3s infinite ease-in-out; }
+                .animated-box-down { animation: floatDown 3s infinite ease-in-out; }
+              
+                /* Outer Animated Border */
+                @keyframes borderAnimation {
+                  0% { background-position: 0% 50%; }
+                  50% { background-position: 100% 50%; }
+                  100% { background-position: 0% 50%; }
+                }
+              
+                .outer-border {
+                  position: relative;
+                  background: #ffffff;  /* Keep the box white */
+                  border-radius: 8px;
+                  padding: 30px;
+                  text-align: center;
+                  font-weight: 600;
+                  font-size: 1.25rem;
+                  box-shadow: 5px 7px 35px 0 rgba(113, 113, 113, 0.1);
+                  transition: transform 0.3s ease-in-out;
+                }
+              
+                .outer-border::before {
+                  content: "";
+                  position: absolute;
+                  top: -4px; left: -4px; right: -4px; bottom: -4px; /* Moves the border outside */
+                  border-radius: 12px;
+                  background: linear-gradient(90deg, #6723fb, #8e44ad, #6723fb);
+                  background-size: 200% 200%;
+                  animation: borderAnimation 4s infinite linear;
+                  z-index: -1;
+                }
+              
+                /* Hover Effect */
+                .outer-border:hover {
+                  transform: scale(1.05);
+                }
+              </style>
+              
               <section id="lnk-1" class="pt--100 pt-[100px] lg:pt-[80px] md:pt-[70px] content-section division">
                 <div class="container">
                   <!-- CENTERED CONTENT -->
@@ -400,34 +466,34 @@
                     <!-- TITLE -->
                     <div class="w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
                       <div class="txt-block wow fadeInUp">
-                        <h2 class="s-46 w-700 text-[2.875rem] lg:text-[2.625rem] md:text-[2.35294rem] sm:text-[2.25rem] xsm:text-[1.8125rem] font-bold mb-[30px] leading-[1.25] font-Jakarta sm:leading-[1.35] xsm:leading-[1.35]">
+                        <h2 class="gradient-heading s-46 w-700 text-[2.875rem] lg:text-[2.625rem] md:text-[2.35294rem] sm:text-[2.25rem] xsm:text-[1.8125rem] font-bold mb-[30px] leading-[1.25] font-Jakarta sm:leading-[1.35] xsm:leading-[1.35]">
                           Your AI-Powered Virtual Employee <br> Work Smarter, Grow Faster!
                         </h2>
                       </div>
                     </div>
               
                     <!-- FOUR BOXES WITH SPACING -->
-                    <div class="w-full flex flex-wrap justify-center gap-[40px] lg:gap-[35px] md:gap-[30px] mt-[40px]" style="gap: 30px !important;">
-                      <!-- BOX 1 -->
-                      <div class="flex-1 min-w-[260px] max-w-[290px]  text-[#353f4f] text-center p-[30px] rounded-[8px] shadow-md font-semibold text-[1.25rem] bg-[#ffffff] hover:shadow-lg transition-all duration-300" style="box-shadow: 5px 7px 35px 0 rgba(113,113,113,.1);">
+                    <div class="w-full flex flex-wrap justify-center gap-[40px] lg:gap-[35px] md:gap-[30px] mt-[40px]" style="gap: 30px !important; color: white !important;">
+                      <!-- BOX 1 (UP) -->
+                      <div class="animated-box animated-box-up outer-border flex-1 min-w-[260px] max-w-[290px]">
                         <span class="text-[#ff7b00] text-[2rem] font-bold">⚡</span>
                         <p class="mt-[12px]">10x Efficiency Boost</p>
                       </div>
-                      
-                      <!-- BOX 2 -->
-                      <div class="flex-1 min-w-[260px] max-w-[290px]  text-[#353f4f] text-center p-[30px] rounded-[8px] shadow-md font-semibold text-[1.25rem] bg-[#ffffff] hover:shadow-lg transition-all duration-300" style="box-shadow: 5px 7px 35px 0 rgba(113,113,113,.1);">
+              
+                      <!-- BOX 2 (DOWN) -->
+                      <div class="animated-box animated-box-down outer-border flex-1 min-w-[260px] max-w-[290px]">
                         <span class="text-[#00b894] text-[2rem] font-bold">💰</span>
                         <p class="mt-[12px]">Cost Reduction & Resource Optimization</p>
                       </div>
               
-                      <!-- BOX 3 -->
-                      <div class="flex-1 min-w-[260px] max-w-[290px]  text-[#353f4f] text-center p-[30px] rounded-[8px] shadow-md font-semibold text-[1.25rem] bg-[#ffffff] hover:shadow-lg transition-all duration-300" style="box-shadow: 5px 7px 35px 0 rgba(113,113,113,.1);">
+                      <!-- BOX 3 (UP) -->
+                      <div class="animated-box animated-box-up outer-border flex-1 min-w-[260px] max-w-[290px]">
                         <span class="text-[#0984e3] text-[2rem] font-bold">🚀</span>
                         <p class="mt-[12px]">Productivity Unleashed</p>
                       </div>
               
-                      <!-- BOX 4 -->
-                      <div class="flex-1 min-w-[260px] max-w-[290px]  text-[#353f4f] text-center p-[30px] rounded-[8px] shadow-md font-semibold text-[1.25rem] bg-[#ffffff] hover:shadow-lg transition-all duration-300" style="box-shadow: 5px 7px 35px 0 rgba(113,113,113,.1);">
+                      <!-- BOX 4 (DOWN) -->
+                      <div class="animated-box animated-box-down outer-border flex-1 min-w-[260px] max-w-[290px]">
                         <span class="text-[#d63031] text-[2rem] font-bold">🎯</span>
                         <p class="mt-[12px]">Unmatched Accuracy</p>
                       </div>
@@ -440,12 +506,15 @@
               
               
               
+              
+              
+              
 
               
     <!-- END TEXT CONTENT -->
     <!-- TEXT CONTENT
               ============================================= -->
-              <section class="pt--100 pt-[100px] lg:pt-[80px] md:pt-[70px] ct-01 content-section division">
+              <section class="pt--200 pt-[200px] lg:pt-[200px] md:pt-[180px] ct-01 content-section division">
                 <div class="container">
                   <!-- SECTION CONTENT (ROW) -->
                   <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
