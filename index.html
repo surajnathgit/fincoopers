@@ -657,6 +657,16 @@
                   animation: none;
                   opacity: 1;
                 }
+
+                .video-css {
+    width: 100%; 
+    height: 550px; 
+    padding-bottom: 20px; 
+    border-radius: 30px !important;
+    overflow: hidden; /* Ensures rounded corners apply */
+    object-fit: contain; /* Makes the video fit properly */
+    display: block; /* Prevents inline display issues */
+}
               </style>
               
               <section class="pt--200 pt-[200px] lg:pt-[200px] md:pt-[180px] ct-01 content-section division">
@@ -704,9 +714,9 @@
                   <!-- IMAGE BLOCK -->
 <div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
   <div class="img-block text-center right-column wow fadeInLeft ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]">
-    <img class="img-fluid animated-image" src="images/img-06.png" alt="content-image">
+    <video class="img-fluid animated-image video-css" src="images/video-06.mp4" autoplay loop muted playsinline alt="content-image">
     <div class="custom-cursor"></div>
-    <div class="hover-text" style="padding: 0 10px 10px 0;">Hover Me</div>
+
   </div>
 </div>
 
