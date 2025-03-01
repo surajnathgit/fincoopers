@@ -231,8 +231,113 @@
                         trial
                       </p>
                     </div>
+
+
                   </div>
                 </div>
+
+                    <style>
+
+.parent-product-box {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.parent-product-box a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.product-box div {
+    padding: 10px;
+    background-color: #f5f5f9;
+    border-radius: 7px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.product-box div img {
+    width: 35px;
+    height: 35px;
+}
+
+.product-box p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 10px;
+    width: 160px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Hover Effect: Move elements up */
+.product-box:hover {
+    transform: translateY(-5px);
+}
+                      
+                    </style>
+
+
+<div class="parent-product-box">
+  <a href="/hrms.html">
+      <div class="product-box">
+          <div><img src="images/product-icon/hrms.svg" alt="HRMS"></div>
+          <p>HRMS</p>
+      </div>
+  </a>
+
+  <a href="#">
+      <div class="product-box">
+          <div><img src="images/product-icon/vendor-management.svg" alt="Background Verification"></div>
+          <p>Background Verification</p>
+      </div>
+  </a>
+
+  <a href="#">
+      <div class="product-box">
+          <div><img src="images/product-icon/los.svg" alt="Asset Management"></div>
+          <p>Asset Management</p>
+      </div>
+  </a>
+
+  <a href="#">
+      <div class="product-box">
+          <div><img src="images/product-icon/affiliateTarget.svg" alt="Task Management"></div>
+          <p>Task Management</p>
+      </div>
+  </a>
+
+  <a href="#">
+      <div class="product-box">
+          <div><img src="images/product-icon/task-management.svg" alt="Project Management"></div>
+          <p>Project Management</p>
+      </div>
+  </a>
+
+  <a href="#">
+      <div class="product-box">
+          <div><img src="images/product-icon/lms.svg" alt="Agency Management"></div>
+          <p>Agency Management - Business Automation</p>
+      </div>
+  </a>
+</div>
+
                 <!-- End row -->
               </div>
               <!-- End container -->
@@ -477,7 +582,7 @@
                       <!-- BOX 1 (UP) -->
                       <div class="animated-box animated-box-up outer-border flex-1 min-w-[260px] max-w-[290px]">
                         <span class="text-[#ff7b00] text-[2rem] font-bold">⚡</span>
-                        <p class="mt-[12px]">10x Efficiency Boost</p>
+                        <p class="mt-[12px]">Boost Efficiency by 10x</p>
                       </div>
               
                       <!-- BOX 2 (DOWN) -->
@@ -570,10 +675,10 @@
   <!-- Points Container -->
   <div style="position: absolute; top: 40%; left: 45%;  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; width: 50%;">
       <!-- Individual Points -->
-      <div class="animated-box">10x Efficiency Boost</div>
+      <div class="animated-box">Boost Efficiency by 10X</div>
       <div class="animated-box">Cost Reduction & Resource Optimization</div>
       <div class="animated-box">Productivity Unleashed</div>
-      <div class="animated-box">Unmatched Accuracy</div>
+      <div class="animated-box">100% Accuracy</div>
   </div>
 </section>
 
@@ -669,7 +774,7 @@
 }
               </style>
               
-              <section class="pt--200 pt-[200px] lg:pt-[200px] md:pt-[180px] ct-01 content-section division">
+              <section class="pt--200 pt-[200px] lg:pt-[200px] md:pt-[180px] ct-01 content-section division" style="display: none;">
                 <div class="container">
                   <!-- SECTION CONTENT (ROW) -->
                   <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
@@ -766,6 +871,102 @@
                 </div>
                 <!-- End container -->
               </section>
+
+
+
+              <hr
+              class="divider w-full h-px bg-transparent bg-[linear-gradient(90deg,rgba(206,211,246,0)_0,#bbb_38%,#bbb_64%,rgba(206,211,246,0)_99%)] opacity-40 m-0 [border:none]">
+
+
+              <style>
+
+.who-we-are-css  {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Makes the section take the full viewport height */
+    overflow: hidden;
+}
+
+.who-we-are-css  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 700px;
+    object-fit: cover; /* Ensures the video covers the entire section */
+}
+
+                </style>
+
+
+              <section class=" who-we-are-css  pt--200 pt-[200px] lg:pt-[200px] md:pt-[180px] ct-01 content-section division" style="position: relative; margin-top: 100px;">
+                <video src="images/who-we-are.mp4" autoplay loop muted playsinline class="w-full h-auto" style="border-radius: 20px;"></video>
+
+
+                <div style="position: absolute; top: 20%; left: 10%;">
+
+                  <section class="content-section division" sxyle="display: none;" style="color: rgba(255, 255, 255, 0.756) !important;">
+                    <div class="container">
+                      <!-- SECTION CONTENT (ROW) -->
+                      <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
+                        <!-- TEXT BLOCK -->
+                        <div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-last order-md-2 md:order-2 lg:order-2 xl:order-2">
+                          <div class="txt-block left-column wow fadeInRight">
+                            <!-- TEXT BOX -->
+                            <div class="txt-box mb-[20px] md:mb-[5px] last:mb-0">
+                              <!-- Title -->
+                              <h5 class="s-24 w-700 text-[1.5rem] lg:text-[1.375rem] md:text-[1.470588rem] sm:text-[1.625rem] xsm:text-[1.4375rem] font-bold mb-[20px] lg:mb-[18px] md:mb-[18px] sm:mb-[18px] leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4]" style="color: white !important;">
+                                Who We Are
+                              </h5>
+                              <!-- Text -->
+                              <p>
+                                Fincoopers Tech India Private Limited is a forward-thinking technology company built on
+                                years of expertise in the finance industry. Our deep-rooted understanding of financial
+                                challenges fuels our drive to create solutions that matter.
+                              </p>
+                            </div>
+                            <!-- END TEXT BOX -->
+                            <!-- TEXT BOX -->
+                            <div class="txt-box mb-0">
+                              <!-- Title -->
+                              <h5 class="s-24 w-700 text-[1.5rem] lg:text-[1.375rem] md:text-[1.470588rem] sm:text-[1.625rem] xsm:text-[1.4375rem] font-bold mb-[20px] lg:mb-[18px] md:mb-[18px] sm:mb-[18px] leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4]"  style="color: white !important;">
+                                Our Vision
+                              </h5>
+    
+                              <h6 class="s-20 w-600 text-[1.2rem] lg:text-[1.135rem] md:text-[1.11rem] sm:text-[1.425rem] xsm:text-[1.3375rem] font-bold mb-[10px] lg:mb-[10px] md:mb-[10px] sm:mb-[10px] leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4]"  style="color: white !important;">
+                               Empower Every Organization with Cutting-Edge Tech
+                              </h6>
+                              <!-- Text -->
+                              <p>
+                                At Fincoopers Tech India, we don't just provide software; we deliver transformation. Our
+                                vision is clear: to equip every organization with the technology they need to excel—
+                                whether you're in finance or any other industry.
+                              </p>
+                            </div>
+                            <!-- END TEXT BOX -->
+                          </div>
+                        </div>
+                        <!-- END TEXT BLOCK -->
+                      <!-- IMAGE BLOCK -->
+    <div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
+   
+    </div>
+    
+                        
+                      </div>
+                      <!-- END SECTION CONTENT (ROW) -->
+                    </div>
+                    <!-- End container -->
+                  </section>
+
+                </div>
+
+
+              </section>
+
+
+
               
     <!-- END TEXT CONTENT -->
 
@@ -808,7 +1009,7 @@
                         <div class="txt-box mb-0">
                           <!-- Title -->
                           <h5 class="s-24 w-700 text-[1.5rem] lg:text-[1.375rem] md:text-[1.470588rem] sm:text-[1.625rem] xsm:text-[1.4375rem] font-bold mb-[20px] lg:mb-[18px] md:mb-[18px] sm:mb-[18px] leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4]">
-                            We Provide Cutting-Edge Tools That:
+                            We Provide Advanced Tools That:
                           </h5>
                           <!-- List -->
                           <ul class="simple-list">
@@ -1010,7 +1211,7 @@
                     <div class="fbox-txt">
                       <h5
                         class="s-19 w-700 !text-[1.1875rem] lg:text-[1.125rem] md:text-[1.3rem] sm:text-[1.4375rem] xsm:text-[1.3125rem] font-bold mt-[20px] mb-[10px] md:mb-[10px] leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4]">
-                        Cutting-Edge Solutions</h5>
+                        Innovative Solutions</h5>
                       <p class="mb-0">From automation tools to data analytics, our diverse product suite transforms the way you do business
                       </p>
                     </div>
@@ -1337,7 +1538,7 @@
                 class="s-46 w-700 text-[2.875rem] lg:text-[2.625rem] md:text-[2.35294rem] sm:text-[2.25rem] xsm:text-[1.8125rem] font-bold lg:mb-[20px] md:mb-[15px] sm:mb-[20px] xsm:mb-[15px] mb-[26px] leading-[1.25] font-Jakarta sm:leading-[1.35] xsm:leading-[1.35]">
                 Streamline Operations, Boost Efficiency</h2>
               <!-- Text -->
-              <p>At <strong>Fincoopers Tech India</strong>, we empower businesses with cutting-edge automation tools, ensuring seamless financial processes, workforce efficiency, and data-driven decision-making.
+              At <strong>Fincoopers Tech India</strong>, we empower businesses with innovative automation tools, ensuring seamless financial processes, workforce efficiency, and data-driven decision-making.
               </p>
               <!-- CONTENT BOX #1 -->
               <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
@@ -1423,7 +1624,7 @@
                             <h5 class="s-22 w-700 text-[1.375rem] font-bold mb-[20px] leading-[1.35] font-Jakarta">
                               <strong>1.</strong> How can FinCoopers help my business?</h5>
                             <!-- Answer -->
-                            <p class="color--grey">FinCoopers provides cutting-edge <strong>automation, analytics, and security solutions</strong> to optimize your financial operations, reduce costs, and improve decision-making.</p>
+                            <p class="color--grey">FinCoopers provides advanced <strong>automation, analytics, and security solutions</strong> to optimize your financial operations, reduce costs, and improve decision-making.</p>
                           </div>
                           <!-- QUESTION #2 -->
                           <div class="question mb--35 mb-[35px] wow fadeInUp">
@@ -1577,12 +1778,11 @@
                       <!-- Title 	-->
                       <h3
                         class="s-28 w-700 text-[1.75rem] lg:text-[1.625rem] md:text-[1.470588rem] sm:text-[1.625rem] xsm:text-[1.4375rem] font-bold leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4]">
-                        Get started for Free!</h3>
+                        Get Started with FinCoopers – Free & Effortless!</h3>
                       <!-- Text -->
                       <p
                         class="color--grey mt-[18px] mb-[25px] lg:mt-[15px] lg:mb-[20px] md:mt-[15px] md:mb-[20px] xsm:mt-[15px] xsm:mb-[20px]">
-                        Aliquam augue suscipit, luctus neque purus ipsum
-                        neque dolor primis libero
+                        Boost efficiency and innovation with AI-powered solutions.
                       </p>
                     </div>
                     <!-- FORM -->
